@@ -1,5 +1,10 @@
 from django import forms
 
+
+# Estes formulários NÃO estão ligados a um modelo de banco de dados 
+# Criados manualmente, campo por campo, e são úteis para casos como login e cadastro
+# onde dados não precisam ser armazenados permanentemente no banco
+
 class LoginForms(forms.Form):
     nome_login=forms.CharField(
         label='Nome de Login', 

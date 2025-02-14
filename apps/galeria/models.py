@@ -19,7 +19,7 @@ class Fotografia(models.Model):
     descricao = models.TextField(null = False, blank = False)
     #caminho da foto
     foto = models.ImageField(upload_to = "fotos/%Y/%m/%d/", blank = True)
-    publicada = models.BooleanField(default = False)
+    publicada = models.BooleanField(default = True)
     data_fotografia = models.DateTimeField(default=datetime.now, blank = False)
     usuario = models.ForeignKey(
       to = User,
